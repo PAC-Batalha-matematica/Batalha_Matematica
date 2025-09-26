@@ -1,0 +1,2 @@
+batalha-de-matematica/*.pck filter=lfs diff=lfs merge=lfs -text
+batalha-de-matematica/*.exe filter=lfs diff=lfs merge=lfs -text

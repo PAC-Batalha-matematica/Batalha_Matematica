@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb3tshq8t326i"]
+
+[ext_resource type="Script" uid="uid://b4w7hroic4aqf" path="res://Scripts/Game.gd" id="1_kldst"]
+[ext_resource type="Texture2D" uid="uid://dvrebvtr2yy57" path="res://Assets/Mapa/Mapa.png" id="2_gl6un"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_kldst")
+
+[node name="Backgroud" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gl6un")
+expand_mode = 1
+
+[node name="PlayerPlayPosition" type="Marker2D" parent="."]
+z_as_relative = false
+position = Vector2(576, 448)
+gizmo_extents = 54.1
+
+[node name="BotPlayPosition" type="Marker2D" parent="."]
+position = Vector2(576, 192)
+gizmo_extents = 55.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+
+[node name="RoundLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 168.0
+offset_right = 360.0
+offset_bottom = 48.0
+
+[node name="BackButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 48.0
+text = "Voltar"
+
+[node name="BotHand" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 832.0
+offset_bottom = 240.0
+mouse_filter = 2
+alignment = 1
+
+[node name="PlayerHand" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 512.0
+offset_right = 832.0
+offset_bottom = 632.0
+mouse_filter = 2
+alignment = 1
